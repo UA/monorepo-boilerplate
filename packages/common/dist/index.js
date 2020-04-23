@@ -6,22 +6,24 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var react_native_1 = require("react-native");
+var store_1 = require("./redux/store");
+var Users_1 = __importDefault(require("./pages/Users"));
+var react_redux_1 = require("react-redux");
+var helper_1 = require("./utils/helper");
 exports.App = function (props) {
-    var image = require("./art/welcome.png");
-    return (React.createElement(react_native_1.View, { style: {
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center"
-        } },
-        React.createElement(react_native_1.Image, { resizeMode: "contain", style: { width: "100%", height: 300 }, source: image }),
-        React.createElement(react_native_1.Text, { style: {
-                textAlign: "center",
-                fontSize: 50,
-                fontFamily: "Helvetica",
-                fontWeight: "bold"
-            } }, "React Native " + props.text + "'e Ho\u015Fgeldiniz.")));
+    helper_1.setBaseUrl();
+    return (React.createElement(react_redux_1.Provider, { store: store_1.store },
+        React.createElement(react_native_1.View, { style: {
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+            } },
+            React.createElement(Users_1.default, null))));
 };
 exports.default = exports.App;
