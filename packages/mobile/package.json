@@ -1,6 +1,19 @@
 {
   "name": "mobile",
-  "workspaces": { "nohoist": [ "react-native", "react-native/**"] },
+  "workspaces": {
+    "nohoist": [
+      "react-native",
+      "react-native/**",
+      "axios",
+      "axios/**",
+      "react-redux",
+      "react-redux/**",
+      "redux",
+      "redux/**",
+      "redux-saga",
+      "redux-saga/**"
+    ]
+  },
   "version": "0.0.1",
   "private": true,
   "scripts": {
