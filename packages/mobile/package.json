@@ -11,7 +11,9 @@
       "redux",
       "redux/**",
       "redux-saga",
-      "redux-saga/**"
+      "redux-saga/**",
+      "react",
+      "react/**"
     ]
   },
   "version": "0.0.1",

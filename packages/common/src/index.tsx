@@ -10,6 +10,7 @@ interface PropsApp {
 }
 
 export const App: React.FC<PropsApp> = (props) => {
+  console.log(props.text);
   setBaseUrl();
   return (
     <Provider store={store}>

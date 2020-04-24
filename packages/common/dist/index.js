@@ -17,6 +17,7 @@ var Users_1 = __importDefault(require("./pages/Users"));
 var react_redux_1 = require("react-redux");
 var helper_1 = require("./utils/helper");
 exports.App = function (props) {
+    console.log(props.text);
     helper_1.setBaseUrl();
     return (React.createElement(react_redux_1.Provider, { store: store_1.store },
         React.createElement(react_native_1.View, { style: {
